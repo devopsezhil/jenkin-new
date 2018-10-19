@@ -123,5 +123,122 @@
 
        *This plug in is add "gradle" support to jenkins. gradle is managed tool inside jenkins (ant & maven) 
         including support for automatic installation and a new build step is provided to execute "gradle" tasks.
-           
+        
+
+5.POM-XML Architecture:
+   
+       *A Project Object Model or POM is the fundamental unit of work in Maven.
+        It is an XML file that contains information about the project and configuration details used by Maven to build project. When executing a task or goal, maven looks for the POM in the current directory.
+
+6. Jenkin File structure.
+
      
+  *As discussed in the defining a pipeline in SCM, A jenkin file is the text file that contains the definition of jenkin pipeline and is checked in to source control.
+        Consider th following pipeline which implements a basic three stage continuous delivery pipeline.
+
+       *Jenkins stores the configuration for each job within an eponymous directory in jobs.The job configuration file is "config.xml". The builds are stored in builds/, and the working dierectory is workspace/.
+
+7. Jenkin Freestyle:
+
+       *Jenkins can be used to perform the typical build server work, such as doing continuous/official/nightly build, run test and 
+       perform some repetitive bstch tasks. this is called "free style" software project.
+
+8. Jenkin Pipeline:
+
+       *It is a suite of jenkins features, installed as plugins.
+        which enables implementation of continuous delivery pipelines, which are automated process for getting s/w from source
+        control through deployment to end users.
+
+9. Types of jenkin pipelines:
+
+       *Jenkins can be written by using two types of syntax.
+           i)Declarative
+           ii)Scripted
+        
+        Declarative and scripted pipelines are constructed funadamentally diffrently.
+        declarative is the most recent features of the jenkin pipeline.which provides richer syntactical features over the scripted popeline syntax.
+
+10. Difference between Free style and pipeline:
+
+       * The MAin difference between any job and pipeline is that the pipeline jon=b runs on the jenkins Master,
+         using a light weight executor expected to use very few sources in order to translate the pipeline to atomic commands
+         that executes or send to the agents.
+11. Supporting Scripting Languages:
+
+       *"Pipelines" are jenkins job enabled by the pipeline (Formerly calle as WORKFLOW) plugins and built with simple texts scripts
+         that uses pipeline DSL (domain specific language) based on Groovy Programming Language.  
+
+12. List of Continuous Integration:
+            
+       1. Jenkin        27.Chef
+       2. Travis        28.Strider
+       3. Teamcity      29.Buildbot
+       4. Circle CI     30.Puppet 
+       5. Codeship      31.Continuum
+       6. Gitlab CI     32.Visualstudio Teamservices
+       7. Buddy         33.Buildmaster
+       8. Wercker       34.Continua CI
+       9. Semaphone     35.CABIE
+       10.Solanolabs    36.Meister
+       11.APp veyor     37.Vexor
+       12.Assertible    38.Drone-10
+       13.Shippable     39.Buildout
+       14.Nevercode     40.Easy CIS
+       15.Bamboo        41.Flosum
+       16.GOCD          42.XI deploy 
+       17.PHPCI         43.Codefresh
+       18.Distelli      44.Midvision rapid deploy
+       19.Finalbuilder  45.Cake
+       20.Buildkite     46.Magnum CI
+       21.Hudson        47.Buddybuild
+       22.Cruisecontrol 48.Phabricator
+       23.Integrity     49.Spinnaker
+       24.Quickbuild    50.Bitrise
+       25.Urbancode
+       26.Grump
+
+13. Difference between Other CI's and Jenkin CI's:
+
+       *Other CI:
+
+                 *It is a develpopment practise where develops integrate code in to shared repository frequently.
+                  preferably several times a day.
+                 *Each integration can then be verified by an automatedbuild and automated tests.
+                  while automated testing is not strictly part of CI is typically implied.
+
+
+       *Jenkin CI:
+
+                 *It is a process in which all development work is integrated as early as possible.
+                  the reuslting Artifacts are automaticalyy created and tested.
+                 *This process allows to identify the errors as soon as possible.
+                 *Jenkin is the popular open source tool to perform continuous integration and build automation.
+
+14. How to Generate Testing Reports from Jenkin files:
+
+       i)  Create Testin Project
+       ii) Installing Jenkins
+       iii)Installing Testing report plugin jenkins.
+
+       *Open jenkins (local host:8080)  and  click on 'Manage Jenkins' and click on 'Manage Plugin'
+        click on 'Available' tab and select the check box against 'Testing Result plugin' and 
+        click on 'install without Restart'.
+       
+       *Open 'Testing project' creted earlier click on 'Configure' and scrolldown to post build actions.
+        and click on 'Add post build actions' dropdown list.
+
+        select 'Publish Testing Results'
+          Enter texting XML reports patterns '**/testing.results.xml and click save button.
+     
+        We have created a new projet 'Testing project' with configuration to run testing . 
+        Tests allow to generate testing reports after execution using jekins.
+       
+        Let execute it now by clicking on 'BUILD NOW' button.
+        It will invoke testing.xml from the batch file. Right click on the 'Build Number'and 
+        click on Console Outout tos see the reults.
+
+ 
+
+                 
+   
+
