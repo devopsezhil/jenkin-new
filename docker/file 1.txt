@@ -1,0 +1,91 @@
+1.What is Docker?
+  *Docker is open source software platform to create, deploy and manage virtualized application
+   containers on a  common operating system, with an ecosystem of allied tools Docker Inc.
+   The company that originally developed by Docker supports a commercial edition and  is the principal
+   sponsor of the open source tool.
+  *Docker is a tool that packages, provisions and run the containers independent  of the OS.
+  *containers technology is available through operating system.
+  *A conatiner pacakges the application service or function with all libraries, configuration files,
+   dependencies and other necessary part to operate.
+  *Each containers shares the services of one underlying operating system.
+  *Docker was created to work on the linux platform, but has extended to offer greater support for non-linux
+   operating system, including microsoft windows and apple OS X. 
+  *Versions of docker for Amazon web services (AWS) and  Microsoft Azure are available.
+
+2.What is Virtuallization?
+  *In Computing virtualisation  refers to the act of creating virtual version of something,
+   including virtual computer hardware platforms, storage devices,and computers network resources.
+  *The main goal of virtualisation is to manage workloads by radically transforming traditional
+   computing to make it more scalable.
+  *Virtualization has been a part of the IT landscape for decades now,  and today it can be 
+   applied to a wide range of system layers,including OS level virtualization,
+   hardware-level virtualization and server virtualization.
+
+3.Difference between Virtuallization and Docker
+   
+   Virtuallization                                       Docker
+    *Hypervisor                                      *Libcontainer
+    *Virtual Machine                                 *Container
+    *Template                                        *Image
+    *Linked VMs                                      *Repository
+    *Catalog                                         *Registry
+    *Boots in Minutes                                *Boots in seconds
+    *Can run variety of guets of OS                  *Limited to Linux
+    *VMs are dependent on hypervisor                 *Containers are portable
+    *VMs run in to a few GBs.                        *Containers are lightweight.
+
+4.Where Docker Works:
+    *Docker hub acts like git, where you can build your images locally on your laptop,
+     commit it and then can be pushed to the docker hub.
+    *Container is the execution environment for docker.
+    *Containers are created from images. It is a writable layer of the iamge.
+
+5.Docker Architecture
+    *Docker uses a client server architecture.
+    *The docker client talks to  the docker daemon,which does the  heavy lifting of building
+     running, and distributing your Docker containers..
+    *The DOCKER client and daemon communicate using a REST API, over UNIX sockets or a network interface.
+
+6.Docker File
+    *A Dockerfile is the text document that contains all the commands a user could call on the 
+     command line  to assemble an image.
+    *Using Docker build users can create an automated build that executes several command-line
+     instructions in succession.
+
+7.Docker Compose
+
+    *It is a tool for defining and running multi container docker applications. To learn more
+     about compose refer following documentation.
+           
+                *Compose Overview
+                *Install Compose
+                *Getting Started
+                *Get started with Django
+                *Get started with Rails
+                *Get started with WordPress
+                *Get started with Drupal
+                *Frequently asked questions
+                *Command-line reference
+                *Compose file reference
+                *Environment file
+
+8.Difference between Docker File and Docker Compose:
+
+      Docker File:
+                *A dockerfile is a simple text file that contains the commands 
+                 a user could call to assemble the image
+                *Dockerfile describes how to build a Docker-image- its essentially
+                 docker version of makefile or pom.xml or build gradle.
+
+      Docker Compose:
+                *Is a tool defining and running multi-container docker applications
+                *Define the services that make up your app in docker-compose.yml
+                 so they can be run together in an isolated environment.
+                *get an app running in one command by  just running docker-compose up.
+
+                *It describes how the image is to deployed 
+                   That is all the things required to create both containers and  environment
+                   it need to run.if several n/w work together  the description of how to deploy them together.
+                   in which order how to link them and so  on can be put in to single docker compose.yml.
+
+               
